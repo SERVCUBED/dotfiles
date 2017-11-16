@@ -240,7 +240,9 @@ client.urgent               $urgent-bg-colour       $urgent-bg-colour           
 exec --no-startup-id nm-applet
 exec --no-startup-id blueman-applet
 
-exec --no-startup-id feh --bg-scale /home/lt/OneDrive/Firefox_wallpaper_arch.png
+exec --no-startup-id ~/.fehbg
+
+exec --no-startup-id redshift-gtk
 
 # Compton
 exec_always pkill -9 compton ; compton -cCFb --config ~/.config/compton.conf
@@ -270,8 +272,8 @@ bindsym $mod+e exec --no-startup-id rofi -show drun -display-drun "" -fuzzy
 bindsym $mod+Tab exec --no-startup-id rofi -show window -display-window ""
 
 # Brightness
-bindsym XF86MonBrightnessUp exec --no-startup-id sudo /home/lt/.backlight.sh -inc +40
-bindsym XF86MonBrightnessDown exec --no-startup-id sudo /home/lt/.backlight.sh -dec +40
+bindsym XF86MonBrightnessUp exec --no-startup-id sudo ~/.backlight.sh -inc +40
+bindsym XF86MonBrightnessDown exec --no-startup-id sudo ~/.backlight.sh -dec +40
 
 ## Custom bindings
 
