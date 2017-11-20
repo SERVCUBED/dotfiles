@@ -32,6 +32,6 @@ i3lock              \
 --clock               \
 --indicator           \
 --timestr="%H:%M:%S"  \
---datestr="%A, %m %Y" \
+--datestr="%A, %d/%m" \
 --wrongtext="Nope!"   \
 -i "$HOME/Firefox_wallpaper_clean_t.png"
