@@ -1,0 +1,2 @@
+#!/bin/sh
+'feh' '--bg-scale' '$HOME/OneDrive/Firefox_wallpaper_arch.png' 
