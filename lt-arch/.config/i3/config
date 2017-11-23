@@ -259,7 +259,7 @@ exec --no-startup-id redshift-gtk
 exec_always pkill -9 compton ; compton -cCFb --config ~/.config/compton.conf
 
 # Lockscreen
-exec --no-startup-id xautolock -time 5 -locker "~/.lock.sh"
+exec --no-startup-id $HOME/.startautolock.sh
 
 # Audio
 exec --no-startup-id start-pulseaudio-x11
