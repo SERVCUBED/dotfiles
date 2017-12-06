@@ -83,6 +83,10 @@ bindsym $mod+Shift+space floating toggle
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
 
+# Set floating window bounds
+floating_minimum_size 10 x 10
+floating_maximum_size 1200 x 600
+
 # focus the parent container
 bindsym $mod+a focus parent
 
@@ -269,8 +273,8 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-mute 0 false &&
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 true && pactl set-sink-volume 0 0
 
 # Touchpad controls
-bindsym $mod+l exec /home/lt/.rotate.sh # Rotate screen
-exec --no-startup-id syndaemon -K -t -i 0.2 -R -d
+bindsym $mod+l exec $HOME/.rotate.sh # Rotate screen
+exec --no-startup-id syndaemon -K -t -i 0.4 -R -d
 
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play-pause
@@ -295,6 +299,8 @@ bindsym XF86MonBrightnessDown exec --no-startup-id sudo $HOME/.backlight.sh -dec
 bindsym $mod+F2 exec --no-startup-id nautilus
 for_window [class="^Nautilus$"] floating enable
 
+for_window [class="^Gnome-system-monitor$"] floating enable
+
 bindsym $mod+F3 exec --no-startup-id $HOME/.launchffdev.sh
 bindsym $mod+Shift+F3 exec --no-startup-id $HOME/.launchffdev.sh -private-window
 
@@ -318,7 +324,7 @@ bindsym $mod+minus exec --no-startup-id ~/.lock.sh
 # Using a custom title string with criteria is deliberate and keeps things simple.
 exec --no-startup-id terminator -l KJ -T "Pop"
 for_window [instance="terminator" title="Pop"] move scratchpad;
-#for_window [instance="terminator" title="Life"] resize grow left 300, resize grow right 300, resize grow down 150, resize grow up 100, move scratchpad;
+#for_window [instance="terminator" title="Pop"] resize grow left 300, resize grow right 300, resize grow down 150, resize grow up 100, move scratchpad;
 bindsym $mod+Return [instance="terminator" title="Pop"] scratchpad show
 
 ## Delayed start
